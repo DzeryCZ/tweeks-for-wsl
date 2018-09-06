@@ -5,7 +5,7 @@ parse_git_branch() {
 export PS1="\[\033[36m\]\u@\h\[\033[00m\] \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 
 # Ability to run docker-machine command properly from WSL
-alias windows_docker_machine="/c/Program\ Files/Docker/Docker/resources/bin/docker-machine.exe"
+alias windows_docker_machine="/c/Program Files/Docker/Docker/resources/bin/docker-machine.exe"
 function docker-machine()
 {
     if [ $1 == "env" ]; then
@@ -17,7 +17,6 @@ function docker-machine()
 export -f docker-machine
 
 # Adding Ability to Run Windows Programs (.exe) from WSL as Fallback without extension
-eval "$(echo "orig_command_not_found_handle()"; declare -f command_not_found_handle | tail -n +2)"
 command_not_found_handle()
 {
     cmd=$1
