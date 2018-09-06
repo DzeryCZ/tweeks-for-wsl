@@ -3,9 +3,11 @@
 # How to install
 
 ```bash
-wget https://raw.githubusercontent.com/DzeryCZ/tweeks-for-wsl/master/.bash_wsl -O -> ~/.bash_wsl
-wget https://raw.githubusercontent.com/DzeryCZ/tweeks-for-wsl/master/.bashrc -O ->> ~/.bashrc
-wget https://raw.githubusercontent.com/DzeryCZ/tweeks-for-wsl/master/wsl.conf -O -> sudo /etc/wsl.conf
+curl https://raw.githubusercontent.com/DzeryCZ/tweeks-for-wsl/master/.bash_wsl > ~/.bash_wsl
+curl https://raw.githubusercontent.com/DzeryCZ/tweeks-for-wsl/master/.bashrc >> ~/.bashrc
+curl -s https://raw.githubusercontent.com/DzeryCZ/tweeks-for-wsl/master/wsl.conf |
+  sudo tee /etc/wsl.conf > /dev/null && \
+  sudo chmod +x /etc/wsl.conf
 ```
 
 **What will I get?**
