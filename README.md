@@ -3,9 +3,9 @@
 # How to install
 
 ```bash
-wget https://gist.githubusercontent.com/DzeryCZ/055442db8d88a116b6e7233f0e60c8e7/raw/91d37921014c9184285f073a6a0c92a6fc204d8a/.bash_wsl -O -> ~/.bash_wsl
-wget https://gist.githubusercontent.com/DzeryCZ/055442db8d88a116b6e7233f0e60c8e7/raw/91d37921014c9184285f073a6a0c92a6fc204d8a/.bashrc -O ->> ~/.bashrc
-wget https://gist.githubusercontent.com/DzeryCZ/055442db8d88a116b6e7233f0e60c8e7/raw/91d37921014c9184285f073a6a0c92a6fc204d8a/wsl.conf -O -> sudo /etc/wsl.conf
+wget https://raw.githubusercontent.com/DzeryCZ/tweeks-for-wsl/master/.bash_wsl -O -> ~/.bash_wsl
+wget https://raw.githubusercontent.com/DzeryCZ/tweeks-for-wsl/master/.bashrc -O ->> ~/.bashrc
+wget https://raw.githubusercontent.com/DzeryCZ/tweeks-for-wsl/master/wsl.conf -O -> sudo /etc/wsl.conf
 ```
 
 **What will I get?**
