@@ -5,16 +5,21 @@ parse_git_branch() {
 export PS1="\[\033[36m\]\u@\h\[\033[00m\] \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 
 # Ability to run docker-machine command properly from WSL
-alias windows_docker_machine="/c/Program Files/Docker/Docker/resources/bin/docker-machine.exe"
 function docker-machine()
 {
     if [ $1 == "env" ]; then
-            $(windows_docker_machine $1 $2 --shell bash | sed 's/C:/\/c/' | sed 's/\\/\//g' | sed 's:#.*$::g' | sed 's/"//g' )
+            $(docker-machine.exe $1 $2 --shell bash | sed 's/C:/\/c/' | sed 's/\\/\//g' | sed 's:#.*$::g' | sed 's/"//g' )
     else
-            windows_docker_machine "$@"
+            docker-machine.exe "$@"
     fi
 }
 export -f docker-machine
+
+# Make VBoxManage works in Vagrant
+function VBoxManage()
+{
+    VBoxManage.exe "$@"
+}
 
 # Adding Ability to Run Windows Programs (.exe) from WSL as Fallback without extension
 command_not_found_handle()
