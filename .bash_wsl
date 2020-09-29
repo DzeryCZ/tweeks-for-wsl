@@ -21,23 +21,3 @@ function VBoxManage()
     VBoxManage.exe "$@"
 }
 export -f VBoxManage
-
-# Adding Ability to Run Windows Programs (.exe) from WSL as Fallback without extension
-command_not_found_handle()
-{
-    cmd=$1
-    shift
-    args=( "$@" )
-
-    IFS=:
-    for dir in $PATH; do
-        for executable in $dir/$cmd.exe $dir/$cmd.com $dir/$cmd.bat; do
-            if [ -x $executable ]; then
-            "$executable" "${args[@]}"
-            return
-            fi
-        done
-    done
-
-    orig_command_not_found_handle "$cmd" "${args[@]}"
-}
