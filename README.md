@@ -1,4 +1,4 @@
-# Tweeks for WSL
+# Tweeks for WSL 1
 
 # How to install
 
@@ -13,5 +13,4 @@ curl -s https://raw.githubusercontent.com/DzeryCZ/tweeks-for-wsl/master/wsl.conf
 **What will I get?**
 - Showing GIT branch in the shell
 - Ability to use docker-machine without any issues
-- Ability to call windows programs without .exe extension
 - Mount drives to root instead of /mnt (required Win10 build >= 1803)
